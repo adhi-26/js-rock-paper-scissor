@@ -1,0 +1,47 @@
+getComputerChoice- function that return a random computer choice
+    generate a random computer choice among "rock", "paper", "scissors"
+
+getPlayerChoice - function to get player choice
+    use prompt to get choice
+    convert choice to lowercase
+    if choice matches "rock", "paper", "scissors"
+        return choice
+    else
+        alert: invalid choice
+        ask prompt again
+
+
+playRound(playerSelection,computerSelection)- function to play one round of rps
+    playerChoice - lowercase of playerSelection
+    comp = 0;
+    player = 0;
+    comp wins:
+        (rock,paper) or (paper,scissors) or (scissors,rock)
+        console.log("You Win!")
+        return ++comp
+    player wins:
+        (rock,scissor) or (paper,rock) or (scissor,paper)
+        console.log("You Win!")
+        return ++play
+    else:
+        return "Match drawn"
+
+function game(rounds){
+    playerWins = 0; compWins = 0;
+    firstTo = Math.ceil(rounds/2);
+    loop: while(playerWins < firstTo && compWins < firstTo)
+        for each round, get compSelection and playerSelection:
+            c = getComputerChoice();
+            p = getPlayerChoice();
+        invoke playRound to determine the result && display it in console
+        playerWins+ = player;
+        compWins+ = comp;
+        Print current scoreline
+    
+    if playerWins > compWins
+        return "You win with score ____"
+    else
+        return "You lose with the score ____"
+
+
+}
