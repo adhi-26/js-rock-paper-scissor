@@ -17,12 +17,12 @@ playRound(playerSelection,computerSelection)- function to play one round of rps
     player = 0;
     comp wins:
         (rock,paper) or (paper,scissors) or (scissors,rock)
-        console.log("You Win!")
-        return ++comp
+        comp = 1;
+        return "You Lose"
     player wins:
         (rock,scissor) or (paper,rock) or (scissor,paper)
-        console.log("You Win!")
-        return ++play
+        player = 1;
+        return "You Win"
     else:
         return "Match drawn"
 
