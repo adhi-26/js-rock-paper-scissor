@@ -9,3 +9,15 @@ function getComputerChoice() {
             return "scissors";
     }
 }
+
+function getPlayerChoice(){
+    let choice = prompt("Enter your Choice", "")
+    choice = choice.toLowerCase();
+    if ( choice=="rock" || choice=="paper" || choice=="scissors" ) {
+        return choice;
+    }else {
+        alert("You have entered an Invalid Choice");
+        return getPlayerChoice();
+    }
+}
+
