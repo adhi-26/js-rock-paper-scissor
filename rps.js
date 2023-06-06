@@ -38,3 +38,24 @@ function playRound(playerSelection,computerSelection) {
         return `Match Drawn!`
     }
 }
+function game() {
+    let rounds = prompt("Enter best of how many rounds you want to play", 5);
+    firstTo = Math.ceil(rounds/2);
+    let playerWins = 0;
+    let compWins = 0;
+    console.log(`Current scoreline is ${playerWins}-${compWins}`);
+    while (playerWins<firstTo && compWins<firstTo) {
+        let p = getPlayerChoice();
+        let c = getComputerChoice();
+        console.log(playRound(p,c));
+        playerWins += player;
+        compWins += comp;
+    }
+    if (playerWins>compWins) {
+        return `You win the game ${playerWins}-${compWins}`;
+    }else {
+        return `You lose the game ${playerWins}-${compWins}`;
+    }
+}
+
+game();

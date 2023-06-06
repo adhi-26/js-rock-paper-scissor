@@ -29,6 +29,7 @@ playRound(playerSelection,computerSelection)- function to play one round of rps
 function game(rounds){
     playerWins = 0; compWins = 0;
     firstTo = Math.ceil(rounds/2);
+    Print current scoreline
     loop: while(playerWins < firstTo && compWins < firstTo)
         for each round, get compSelection and playerSelection:
             c = getComputerChoice();
@@ -36,7 +37,7 @@ function game(rounds){
         invoke playRound to determine the result && display it in console
         playerWins+ = player;
         compWins+ = comp;
-        Print current scoreline
+        
     
     if playerWins > compWins
         return "You win with score ____"
